@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land information</title>
+    <link href="./cropped-logo.png" rel="SHORTCUT ICON" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Moul&display=swap" rel="stylesheet">
+</head>
+<style>
+
+/* Container for content */
+.screen {
+        width: 95%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        }
+
+/* Mobile-first media queries */
+@media screen and (min-width: 768px) {
+.screen {
+         width: 100%;
+         margin-left: 20px;
+         margin-right: 20px;
+        }
+        
+        /* Tablet-specific styles */
+        }
+
+@media screen and (min-width: 1024px) {
+.screen {
+            width: 100%;
+        }
+        
+        /* Desktop-specific styles */
+        }
+
+.screen {
+        font-family: Arial, Helvetica, khmer, sans-serif;
+        background-color: white
+        color: #333;
+        line-height: 1.5;
+        margin: 3% 2%;
+        padding: 5px;
+        }
+.picture {
+        position: relative;
+        width: 95%;
+        height: 6%;
+        margin-bottom: 3px;
+        margin-top: 5px;
+        }
+.active {
+        padding: 10px;
+        align-items: start;
+        text-align: center;
+        background-color: #2f9ae4;
+        color: white;
+        border: none;
+        border-radius: 1px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        width: 49%; 
+        margin-right: 0%;    
+        }
+.info-button {
+        padding: 10px;
+        text-align: center;
+        align-items: start;
+        background-color: #ecf0f1;
+        color: hwb(240 29% 25%);
+        border: none;
+        border-radius: 1px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        width: 49%;
+        margin-left: -4px;
+        }
+.table {
+        border-collapse: collapse;
+        width: 98%;
+        height: 15px;
+        margin: 1px;
+        border: 1px gray solid;
+        }
+.table th,
+table td {
+        font-family: "Battambang", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+        text-align: left;
+        border: 1px gray solid;
+        padding: 10px;
+        }
+</style>
+<body class="screen">
+            <img src="./mlm_name.png" alt="header" class="picture">
+                <br>
+    <di>
+            <button class="active" id="tab-1"
+                    style="border: 1px solid rgb(183, 181, 181); 
+                            font-family: Moul, serif;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-size: 15px;">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                        width="20"
+                        height="16" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        stroke-width="2" 
+                        stroke-linecap="round">
+                    <path d="M8 6h13M8 12h13M8 18h13M3 6h1v1H3zM3 12h1v1H3zM3 18h1v1H3z" class="icon-button svg"/>
+                </svg>
+                    ព័ត៍មានក្បាលដី
+            </button>
+            <a href="https://gdcg.mlmupc.gov.kh/?p=cINHWMGTiYvuCu2XBd5XfA%3D%3D&burden=active" target="_self">
+                <button class="info-button" id="tab-2"
+                    style="border: 1px solid gray;  
+                            font-family: Moul, serif;
+                            font-weight: 400;
+                            font-style: normal; font-size: 15px;">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                        viewBox="0 0 24 24" 
+                        fill="currentColor" 
+                        width="20" 
+                        height="16">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" class="info-icon svg"/>
+                </svg>
+                    ព័ត៍មានអំពីបន្ទុក
+            </button></a>
+    </di>    
+                <p style="margin: 5px; 
+                        font-size: 12px; 
+                        font-family: Battambang, system-ui;
+                        font-weight: 400;
+                        font-style: normal;">
+                            (ធ្វើបច្ចុប្បន្នភាពៈ 19-06-2025 17:00)
+                </p>
+    <table class="table">
+        <tr style="background-color: #ecf0f1">
+            <td colspan="2">វិញ្ញាបនបត្រសម្គាល់ម្ចាស់អចលនវត្ថុ៖</td>
+        </tr>
+        <tr>
+            <td colspan="2">12080301-0648</td>
+        </tr>
+        
+        <tr style="background-color: #ecf0f1">
+            <td colspan="2">
+            ទីតាំងក្បាលដី៖
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">ភូមិ ​៖ ឃ្មួញ​ ឃុំ/សង្កាត់៖ ឃ្មួញ ស្រុក/ខណ្ឌ៖ ឬស្សីកែវ រាជធានី/ខេត្ត៖ ភ្នំពេញ</td>
+        </tr>
+        <tr>
+            <td style="width: 50%; background-color: #ecf0f1">
+                លេខក្បាលដី៖
+            </td>
+            <td>
+                648
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 50%; background-color: #ecf0f1">
+                ទំហំ(ជាម៉ែត្រការ៉េ)៖
+            </td>
+            <td>
+                5618
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 50%; background-color: #ecf0f1">
+                រូបភាពប្រើប្រាស់ដី៖
+            </td>
+            <td>
+                កសិកម្ម
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 50%; background-color: #ecf0f1">
+                 លក្ខណៈនៃការប្រើប្រាស់ដី៖
+            </td>
+            <td>
+                ឯកជន
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 50%; background-color: #ecf0f1">
+                ប្រភេទទ្រព្យ៖
+            </td>
+            <td>
+                 កម្មសិទ្ធិអវិភាគ
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 50%; background-color: #ecf0f1">
+                ម្ចាស់កម្មសិទ្ធិ៖
+            </td>
+            <td>
+                 សុទ្ធ លីដា និង ម៉ុល សេងហ៊ាង (កម្មសិទ្ធិករនៃទ្រព្យអវិភាគ)
+            </td>
+        </tr>
+    </table>  
+<script>
+
+    const tab1 = document.getElementById("tab-1");
+    const tab1Content = document.getElementById("tab-1");
+    const tab2 = document.getElementById("tab-2");
+    const tab2Content = document.getElementById("tab-2");
+
+    tab1.addEventListener("click", () => {
+    tab1.classList.add("active");
+    tab2.classList.remove("active");
+
+    tab1Content.classList.remove("hidden");
+    tab2Content.classList.add("hidden");
+      });
+
+    tab2.addEventListener("click", () => {
+    tab2.classList.add("active");
+    tab1.classList.remove("active");
+
+    tab1Content.classList.add("hidden");
+    tab2Content.classList.remove("hidden");
+      });
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
