@@ -1,0 +1,80 @@
+* {
+    margin: unset;
+}
+.content {
+    background-color: transparent;
+    line-height: 1.4;
+    width: 100%;
+    max-width: 375px;
+    height: 100vh;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+img {
+    width: 100%;
+    margin: 0px;
+    top: 20px;
+    position: relative;
+}
+a {
+    font-size: 14px;
+    font-family: "Moul", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: #337ab7;
+    background-color: #ecf0f1;
+    border: 1px solid gray;
+    border-radius: 1px;
+    width: 100%;
+    padding: 6px 10px;
+    top: 25px;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.active {
+    color: white;
+    background-color: #337ab7;
+}
+.hide-show {
+    display: none;
+}
+svg {
+    margin: 0px 2px;
+}
+span {
+    font-size: 13px;
+    font-family: "Battambang", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: gray;
+    width: 100%;
+    top: 30px;
+    position: relative;
+}
+table {
+    border-collapse: collapse;
+    border: 1px solid rgb(183, 181, 181);
+    width: 100%;
+    margin-top: 35px;
+    position: relative;
+}
+table td {
+    font-size: 14px;
+    font-family: "Battambang", system-ui;
+    padding: 6px 10px;
+    color: black;
+    flex-direction: column;
+    border: 1px solid rgb(183, 181, 181);
+}
+.table-color {
+    background-color: #ecf0f1;
+}

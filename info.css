@@ -1,0 +1,121 @@
+* {
+    margin: unset;
+}
+.content {
+    background-color: transparent;
+    line-height: 1.4;
+    width: 100%;
+    max-width: 375px;
+    height: 100vh;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+img {
+    width: 100%;
+    margin: 0px;
+    top: 20px;
+    position: relative;
+}
+a {
+    font-size: 14px;
+    font-family: "Moul", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: #337ab7;
+    background-color: #ecf0f1;
+    border: 1px solid gray;
+    border-radius: 1px;
+    width: 100%;
+    padding: 6px 10px;
+    top: 25px;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.active {
+    color: white;
+    background-color: #337ab7;
+}
+.text-decoration {
+    text-decoration: none;
+}
+.hide-show {
+    display: none;
+}
+svg {
+    margin: 0px 2px;
+}
+span {
+    font-size: 13px;
+    font-family: "Battambang", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: gray;
+    width: 100%;
+    top: 30px;
+    position: relative;
+}
+.head-1 {
+    font-size: 14px;
+    font-family: "Battambang", system-ui;
+    width: 100%;
+    color: black;
+    top: 35px;
+}
+.info-detail {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: transparent;
+    font-size: 14px;
+    font-family: "Battambang", system-ui;
+    position: relative;
+    border: 1px solid gray;
+    width: 100%;
+    height: 200px;
+    top: 45px;
+    border-radius: 3px;
+}
+.head-2 {
+    position: relative;
+    font-size: 14px;
+    font-family: "Battambang", system-ui;
+    width: 100%;
+    color: black;
+    top: 25px;
+}
+.log-info {
+    position: relative;
+    font-size: 16px;
+    width: 300px;
+    padding: 6px 35px;
+    border-radius: 3px;
+    font-family: "Battambang", system-ui;
+    background-color: #337ab7;
+    border: 1px solid grey;
+    color: aliceblue;
+    top: 75px;
+    text-decoration: none;
+}
+.camidkey {
+    position: relative;
+    font-size: 16px;
+    width: 200px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-family: "Battambang", system-ui;
+    background-color: #337ab7;
+    border: 1px solid grey;
+    color: aliceblue;
+    top: 110px;
+    text-decoration: none;
+}
