@@ -65,6 +65,7 @@ table {
     border: 1px solid rgb(183, 181, 181);
     width: 100%;
     margin-top: 35px;
+    padding: 10px 10px;
     position: relative;
 }
 table td {
