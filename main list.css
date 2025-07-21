@@ -64,6 +64,7 @@ table {
     border-collapse: collapse;
     border: 1px solid rgb(183, 181, 181);
     width: 100%;
+    height: auto;
     margin-top: 35px;
     padding: 10px 10px;
     position: relative;
