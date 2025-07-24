@@ -20,7 +20,8 @@
     border: 1px solid grey;
     box-shadow: 0px 0px 10px grey;
     border-radius: 6px;
-    top: 30px;
+    top: 35px;
+    overflow: hidden;
 }
 .head-form {
     background-color: transparent;
@@ -29,17 +30,19 @@
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 180px;
 }
 h5 {
     font-family: "Battambang", system-ui;
     font-size: 14px;
     font-weight: 600;
-    padding-left: 10px;
 }
 .button-close {
     font-size: 19px;
     font-weight: 800;
-    margin-left: 230px;
     cursor: pointer;
 }
 a {
@@ -49,14 +52,12 @@ a {
     font-size: 14px;
     font-weight: 400;
     font-family: "Battambang", system-ui;
-    padding: 8px 10px;
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-label {
-    margin-right: 6px;
+    padding-left: 5px;
+    padding-right: 5px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 sup {
     color: red;
@@ -64,24 +65,33 @@ sup {
     font-weight: 500;
 }
 input {
+    width: 96%;
+    height: auto;
+    padding: 5px;
     font-size: 13px;
     font-family: "Battambang", system-ui;
-    padding: 3px 6px;
+}
+.control-input-form {
+    display: flex;
+    flex-direction: row;
 }
 .form-group-add {
     background-color: gainsboro;
     border: 1px solid gray;
-    margin-right: 0px;
-    color: gray;
-    padding: 2px 4px;
+    border-radius: 2px;
+    border-right: none;
+    text-align: center;
+    color: #555;
+    padding: 0px 5px;
 }
 .form-group-password {
     background-color: gainsboro;
     border: 1px solid gray;
-    padding: 2px 4px;
-    margin-right: 0px;
-    color: gray;
-    
+    border-radius: 2px;
+    border-right: none;
+    color: hwb(204 27% 9%);
+    text-align: center; 
+    padding: 0px 5px;
 }
 .foot-form {
     background-color: transparent;
@@ -91,7 +101,8 @@ input {
     align-items: flex-end;
     justify-content: flex-end;
     gap: 10px;
-    padding: 10px 10px;
+    padding: 8px;
+    margin-top: 15px;
 }
 .button-submitt {
     width: 70px;
@@ -101,8 +112,8 @@ input {
     background-color: #2a7af1bc;
     border: 1px solid gray;
     border-radius: 3px;
-    padding: 1px;
     cursor: pointer;
+    padding: 7px;
 }
 .button-back {
     width: 100px;
@@ -112,6 +123,6 @@ input {
     background-color: #2a7af1bc;
     border: 1px solid gray;
     border-radius: 3px;
-    padding: 1px;
     cursor: pointer;
+    padding: 7px;
 }
