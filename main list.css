@@ -67,7 +67,7 @@ table {
     margin-top: 35px;
     position: relative;
 }
-table td {
+td {
     font-size: 14px;
     max-width: 50%;
     font-family: "Battambang", system-ui;
