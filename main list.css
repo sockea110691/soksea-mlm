@@ -77,4 +77,5 @@ table td {
 }
 .table-color {
     background-color: #ecf0f1;
+    max-width: 50%;
 }
