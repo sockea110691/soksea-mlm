@@ -69,6 +69,7 @@ table {
 }
 table td {
     font-size: 14px;
+    max-width: 50%;
     font-family: "Battambang", system-ui;
     padding: 8px 10px;
     color: black;
@@ -77,5 +78,4 @@ table td {
 }
 .table-color {
     background-color: #ecf0f1;
-    max-width: 50%;
 }
