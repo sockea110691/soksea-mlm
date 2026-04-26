@@ -1,0 +1,204 @@
+
+* {
+    margin: unset;
+}
+.content {
+    background-color: transparent;
+    width: 100%;
+    max-width: 375px;
+    height: 100vh;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header {
+    position: relative;
+    background-color: #86c6e0;
+    width: 100%;
+    height: auto;
+    border-radius: 2px gray;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+}
+.paragrap-a {
+    font-family: "Kantumruy Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.paragrap-b {
+    font-family: "Kantumruy Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #fff;
+    font-size: 9px;
+}
+.cropplogo {
+    width: 48px;
+    height: 48px;
+}
+.button-verifi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Kantumruy Pro", sans-serif;
+    font-style: normal;
+    padding-top: 60px;
+}
+.verifi {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #166516;
+    background-color: #dcfce7;
+    box-shadow: 0px 0px 3px #dcfce7;
+    font-size: 14px;
+    width: 130px;
+    height: auto;
+    border-radius: 60px;
+    z-index: 999;
+    padding: 8px 16px;
+    gap: 6px;
+    font-weight: 550;
+}
+.sing {
+    width: 20px;
+    height: 20px;
+}
+.text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #fff;
+    font-family: "Kantumruy Pro", sans-serif;
+    font-weight: 670;
+    font-style: normal;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+.body-card {
+    padding: 15px;
+    position: relative;
+    background: #f9faf9;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+
+    height: auto;
+    border: 2px solid hsl(0, 3%, 94%);
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0px 0px 5px gainsboro;
+    color: black;
+    overflow: hidden;
+    
+}
+.land-infor {
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background: white;
+    border-bottom: 1px solid gainsboro;
+    box-shadow: 0px 0px 15px gainsboro;
+    text-align: center;
+    padding: 15px;
+    font-family: "Kantumruy Pro", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    line-height: 2;
+}
+.ruler {
+    background: #86c6e0;
+    width: 120px;
+    height: 2px;
+    border: 1px solid #86c6e0;
+    border-radius: 20px;
+}
+.detail-information {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    line-height: 2;
+}
+.land-infor-a {
+    position: absolute;
+    text-align: start;
+    font-family: "Kantumruy Pro", sans-serif;
+    font-size: 14px;
+    color: gray;
+    font-weight: 400;
+}
+.land-infor-b {
+    text-align: right;
+    font-family: "Kantumruy Pro", sans-serif;
+    font-size: 14px;
+    color: black;
+    font-weight: 600;
+    margin-left: 100px;
+}
+.nav-menu {
+    text-align: center;
+    background: #86c6e0;
+    font-family: "Kantumruy Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 250;
+    border: 1px solid #86c6e0;
+    border-radius: 20px;
+    box-shadow: 0px 0px 8px #cac9c9;
+    width: 150px;
+    color: white;
+    height: auto;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+.scroll-down {
+    width: 20px;
+    height: 20px;
+}
+.nav-menu:hover {
+    background-color: hsl(196, 86%, 47%);     
+    transform: translateY(2px);
+}
+
+.footer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: #e6e2d8;
+    color: #203554;
+    height: auto;
+    padding: 20px 10px 20px 10px;
+    font-size: 12px;
+    font-family: "Kantumruy Pro", sans-serif;
+}
