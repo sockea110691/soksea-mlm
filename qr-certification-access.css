@@ -196,6 +196,7 @@
     height: auto;
     padding: 10px;
     gap: 5px;
+    background: #e6e2d8;
 }
 .font-text {
     position: relative;
@@ -203,7 +204,7 @@
     justify-content: center;
     align-items: center;
     line-height: 1.5;
-    background: #e6e2d8;
+    
     color: #203554;
     height: auto;
     font-size: 12px;
