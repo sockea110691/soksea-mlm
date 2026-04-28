@@ -191,7 +191,7 @@
 }
 
 .footer {
-     position: relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -200,7 +200,6 @@
     background: #e6e2d8;
 }
 .font-text {
-    display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
