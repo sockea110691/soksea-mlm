@@ -191,15 +191,15 @@
 }
 
 .footer {
+    position: relative;
     display: flex;
-    width: auto;
-    height: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
     padding: 10px;
-    gap: 5px;
+    line-height: 1.5;
     background: #e6e2d8;
 }
 .font-text {
-    position: relative;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -209,7 +209,6 @@
     font-family: "Kantumruy Pro", sans-serif;
 }
 .font-fix {
-    position: relative;
     justify-content: center;
     align-items: center;
 }
