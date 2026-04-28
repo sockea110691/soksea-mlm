@@ -195,6 +195,7 @@
     width: auto;
     height: auto;
     padding: 10px;
+    gap: 5px;
 }
 .font-text {
     position: relative;
