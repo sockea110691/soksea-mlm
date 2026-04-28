@@ -192,6 +192,7 @@
 
 .footer {
     display: flex;
+    width: 100%;
 }
 .font-text {
     position: relative;
