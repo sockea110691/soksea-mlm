@@ -193,8 +193,6 @@
 .footer {
     position: relative;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     padding: 10px;
     line-height: 2;
     background: #e6e2d8;
