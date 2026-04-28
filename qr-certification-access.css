@@ -194,6 +194,7 @@
     display: flex;
 }
 .font-text {
+    position: relative;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -208,4 +209,7 @@
 .font-fix {
     width: 10px;
     height: 10px;
+    position: relative;
+    align-items: start;
+    justify-content: center;
 }
