@@ -185,8 +185,10 @@
     height: 20px;
 }
 .nav-menu:hover {
-    background-color: hsl(196, 86%, 47%);     
-    transform: translateY(2px);
+    background-color: hsl(196, 86%, 47%); 
+    border-radius: 20px;
+    transition: 1s ease-in-out;
+
 }
 
 .footer {
