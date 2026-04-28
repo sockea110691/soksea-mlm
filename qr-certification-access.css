@@ -206,5 +206,7 @@
 .font-fix {
     justify-content: center;
     align-items: center;
+    width: 5px;
+    height: 5px;
    
 }
