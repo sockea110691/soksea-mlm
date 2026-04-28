@@ -196,7 +196,6 @@
     flex-direction: column;
     flex-wrap: wrap;
     padding: 10px;
-    gap: 3px;
     line-height: 1.2;
     background: #e6e2d8;
 }
@@ -208,6 +207,7 @@
     color: #203554;
     font-size: 12px;
     font-family: "Kantumruy Pro", sans-serif;
+    gap: 2px;
 }
 .font-fix {
     justify-content: center;
