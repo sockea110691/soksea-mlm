@@ -186,6 +186,7 @@
 }
 .nav-menu:hover {
     transition: 0.5s ease-in-out;
+    border-radius: 20px;
 
 }
 
