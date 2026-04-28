@@ -196,11 +196,10 @@
     justify-content: center;
     align-items: center;
     line-height: 1.5;
-    gap: 2px;
     background: #e6e2d8;
     color: #203554;
     height: auto;
-    padding: 20px 10px 20px 10px;
+    padding: 10px;
     font-size: 12px;
     font-family: "Kantumruy Pro", sans-serif;
 }
