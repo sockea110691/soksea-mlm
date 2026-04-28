@@ -186,10 +186,6 @@
 }
 .nav-menu:hover {
     transition: 0.5s ease-in-out;
-    transform: scale(1);
-    border-radius: 20px;
-    border: 1px solid #86c6e0;
-
 }
 
 .footer {
