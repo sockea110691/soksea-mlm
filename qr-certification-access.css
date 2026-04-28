@@ -196,7 +196,8 @@
     flex-direction: column;
     flex-wrap: wrap;
     padding: 10px;
-    line-height: 1.5;
+    gap: 3px;
+    line-height: 1.2;
     background: #e6e2d8;
 }
 .font-text {
@@ -211,5 +212,5 @@
 .font-fix {
     justify-content: center;
     align-items: center;
-    gap: 5px;
+   
 }
