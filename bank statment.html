@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Loan Statement | 12 Months (Jun 2025 - Jun 2026)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #eef2f7;
+            font-family: 'Arial', 'Helvetica Neue', sans-serif;
+            font-size: 12px;
+            color: #000000;
+            padding: 32px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .statement-container {
+            max-width: 1480px;
+            width: 100%;
+            background: #ffffff;
+            overflow-x: auto;
+            padding: 20px 24px 28px 24px;
+        }
+
+        /* header */
+        .statement-header {
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+        .logo {
+            position: relative;
+            display: flex;
+            width: 50px;
+            height: 50px;
+        }
+        .header-logo {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 10px;
+        }
+        .title-section h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: black;
+            margin-bottom: 2px;
+            letter-spacing: -0.2px;
+        }
+
+        .title-section p {
+            font-size: 16px;
+            font-weight: 700;
+            color: black;
+            line-height: 1.4;
+        }
+        .account-name {
+            position: relative;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 2%;
+            line-height: 1.4;
+        }
+        .ruler {
+            border: 1px solid gray;
+        }
+        .header-01 {
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .text-01 {
+            font-size: 11px;
+        }
+    
+        .activity {
+            font-size: 14px;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .account-h {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .p-text {
+            margin-left: 50px;
+        }
+        .period-info strong {
+            color: #0f3b5c;
+        }
+
+        /* summary cards */
+        .summary-grid {
+            display: flex;
+            gap: 18px;
+            padding: 16px 22px;
+            margin-bottom: 10px;
+        }
+
+        .summary-card {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .summary-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            color: #4a627a;
+        }
+
+        .summary-number {
+            font-size: 18px;
+            font-weight: 800;
+            color: #1f2e3f;
+            margin-top: 5px;
+            word-break: break-word;
+        }
+
+        .summary-number.positive {
+            color: #1f7840;
+        }
+
+        .summary-number.negative {
+            color: #b13e3e;
+        }
+
+        /* table styling */
+        .loan-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Arial', sans-serif;
+            font-size: 12px;
+            color: black;
+        }
+
+        .loan-table th {
+            background: #e9eff5;
+            text-align: left;
+            padding: 12px 10px;
+            font-weight: 500;
+            border-bottom: 2px solid #cbdae9;
+            color: black;
+        }
+
+        .loan-table td {
+            padding: 10px 10px;
+            border-bottom: 1px solid #e3eaf1;
+            vertical-align: top;
+        }
+
+        /* align numeric columns to right */
+        .loan-table th:nth-child(3),
+        .loan-table th:nth-child(4),
+        .loan-table th:nth-child(5),
+        .loan-table th:nth-child(6),
+        .loan-table td:nth-child(3),
+        .loan-table td:nth-child(4),
+        .loan-table td:nth-child(5),
+        .loan-table td:nth-child(6) {
+            text-align: right;
+        }
+
+        .desc-column {
+            word-break: break-word;
+            max-width: 280px;
+        }
+
+        .opening-row {
+            background: #fff8e7;
+            font-weight: 500;
+        }
+
+        .closing-row {
+            background: #ecf3fa;
+            font-weight: 500;
+        }
+
+        .total-row {
+            background: #eef3fc;
+            font-weight: 700;
+            border-top: 2px solid #cbdae9;
+        }
+
+        .total-row td {
+            padding: 12px 10px;
+        }
+
+        .balance-cell {
+            font-weight: 400;
+        }
+
+        @media (max-width: 780px) {
+            body {
+                padding: 16px 12px;
+            }
+            .statement-container {
+                padding: 14px;
+            }
+            .loan-table th, .loan-table td {
+                padding: 8px 5px;
+            }
+            .summary-number {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="statement-container">
+    <div class="statement-header">
+        <div class="header-logo">
+            <div class="logo"><img src="./images.png" alt="logo"></div>
+            <div class="title-section">
+                <h1>IBK Phnom Penh Branch</h1>
+            </div>
+        </div>
+        <div class="p-text"><p>THE OLYMPIA CITY NO.S2-23, MONTiRETH BLVD(NO 217)<br> VEAL VONG,7 KARA <br>PHNOM PENH</p></div>
+    </div>
+    <div class="account-name">
+        <div class="header-text01">
+            <p class="header-01">SEK SOTHEARY ,SOR SAMOL </p>
+            <p class="text-01">Along Street 104, Phnum Thmey<br>Tien, Dangkao<br>Phnom Penh</p>
+        </div>
+        <div class="header-text02">
+            <p class="text-01">Ordinary Deposite/KHR<br>ACCOUNT NUMBER 0792-001371-20001, 0792-001371-20002<br>SYSTEM DATE 03-Jun-2026<br>RATE 0.50000 %</p>
+        </div>
+    </div>
+    <div class="ruler"></div>
+    <div class="account-h">ACCOUNT NSUMMERY</div>
+    <div class="ruler"></div>
+
+    <!-- dynamic summary -->
+    <div id="summaryPanel" class="summary-grid"></div>
+    <div class="ruler"></div>
+     <div class="activity">ACCOUNT ACTIVITY</div>
+
+   
+
+    <!-- main table: date | description | debit | credit | balance | available -->
+    <div style="overflow-x: auto;">
+        <table class="loan-table" id="statementTable">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>DESCRIPTION / CHECK</th>
+                    <th>DEBIT(CHARDGE)</th>
+                    <th>CREDIT</th>
+                    <th>BALANCE</th>
+                    <th>AVAILABLE</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- rows generated dynamically -->
+            </tbody>
+        </table>
+    </div>
+   
+</div>
+
+<script>
+    // ------------------------------------------------------------------
+    // DATA MODEL based on user input (exact order, corrected typos)
+    // Opening balance: 1,110,000.00 as of 01-Jun-2025
+    // All transactions from 16-Jun-2025 to 17-May-2026
+    // End of statement: 03-Jun-2026 (closing row)
+    // ------------------------------------------------------------------
+
+    // Helper: format number with thousand separators, 2 decimals, no currency
+    function formatNumber(value) {
+        if (value === null || value === undefined) return "—";
+        let num = typeof value === 'number' ? value : parseFloat(value);
+        if (isNaN(num)) return "0.00";
+        return num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    // ----- Transactions in strict chronological order -----
+    // Note: Amounts corrected based on typical interpretation:
+    // "19,477,00.00" -> 19,477,000.00? Actually pattern shows similar to 19,477,000.00 but I'll keep as 19,477,000.00
+    // However original snippet: "19,477,00.00" likely missing a zero but for consistency with surrounding numbers (38M, 5.9M) 
+    // I use: 19,477,000.00 (since loan amounts around 20 million later)
+    // Also "Loan 079200137131002 debit 5,966,726.00" etc.
+    // I preserve given amounts but fix obvious commas: user wrote "19,477,00.00" -> I interpret as 19,477,000.00.
+    // The pattern: loan 001 ~20M, interest ~38M, loan 002 ~6M, interest ~11M each month. So first entry 19,477,000.00 is consistent.
+    // All amounts taken exactly as given but converting to proper numbers.
+    
+    const rawTransactions = [
+        // 16-Jun-2025
+        { date: "16-Jun-2025", description: "Loan 079200137131001", type: "debit", amount: 19477000.00 },
+        { date: "16-Jun-2025", description: "INT(079200137131001)", type: "debit", amount: 38203041.00 },
+        { date: "16-Jun-2025", description: "Loan 079200137131002", type: "debit", amount: 5966726.00 },
+        { date: "16-Jun-2025", description: "INT(079200137131002)", type: "debit", amount: 11072380.00 },
+        // 17-Jun-2025 credit
+        { date: "17-Jun-2025", description: "100FT13123465776", type: "credit", amount: 76000000.00 },
+        // 17-Jul-2025 (multiple debits)
+        { date: "17-Jul-2025", description: "Loan 079200137131001", type: "debit", amount: 20724246.00 },
+        { date: "17-Jul-2025", description: "INT(079200137131001)", type: "debit", amount: 38056795.00 },
+        { date: "17-Jul-2025", description: "Loan 079200137131002", type: "debit", amount: 6006504.00 },
+        { date: "17-Jul-2025", description: "INT(079200137131002)", type: "debit", amount: 11032602.00 },
+        // 16-Jul-2025 credit
+        { date: "16-Jul-2025", description: "100FT13124476098", type: "credit", amount: 76000000.00 },
+        // 15-Aug-2025 debits
+        { date: "15-Aug-2025", description: "Loan 079200137131001", type: "debit", amount: 20862408.00 },
+        { date: "15-Aug-2025", description: "INT(079200137131001)", type: "debit", amount: 37927633.00 },
+        { date: "15-Aug-2025", description: "Loan 079200137131002", type: "debit", amount: 6046547.00 },
+        { date: "15-Aug-2025", description: "INT(079200137131002)", type: "debit", amount: 10992559.00 },
+        // 16-Aug-2025 credit
+        { date: "16-Aug-2025", description: "100FT13123245675", type: "credit", amount: 76000000.00 },
+        // 15-Sep-2025 debits
+        { date: "15-Sep-2025", description: "Loan 079200137131001", type: "debit", amount: 21001491.00 },
+        { date: "15-Sep-2025", description: "INT(079200137131001)", type: "debit", amount: 37788550.00 },
+        { date: "15-Sep-2025", description: "Loan 079200137131002", type: "debit", amount: 6086858.00 },
+        { date: "15-Sep-2025", description: "INT(079200137131002)", type: "debit", amount: 10952248.00 },
+        // 17-Sep-2025 credit
+        { date: "17-Sep-2025", description: "100FT13124467889", type: "credit", amount: 76000000.00 },
+        // 15-Oct-2025 debits
+        { date: "15-Oct-2025", description: "Loan 079200137131001", type: "debit", amount: 21141501.00 },
+        { date: "15-Oct-2025", description: "INT(079200137131001)", type: "debit", amount: 37648540.00 },
+        { date: "15-Oct-2025", description: "Loan 079200137131002", type: "debit", amount: 6127437.00 },
+        { date: "15-Oct-2025", description: "INT(079200137131002)", type: "debit", amount: 10911669.00 },
+        // 16-Oct-2025 credit
+        { date: "16-Oct-2025", description: "100FT13127644769", type: "credit", amount: 78000000.00 },
+        // 17-Nov-2025 debits
+        { date: "17-Nov-2025", description: "Loan 079200137131001", type: "debit", amount: 21282444.00 },
+        { date: "17-Nov-2025", description: "INT(079200137131001)", type: "debit", amount: 37507597.00 },
+        { date: "17-Nov-2025", description: "Loan 079200137131002", type: "debit", amount: 6168286.00 },
+        { date: "17-Nov-2025", description: "INT(079200137131002)", type: "debit", amount: 10870820.00 },
+        // 17-Nov-2025 credit (same date but after debits? order preserved)
+        { date: "17-Nov-2025", description: "100FT13124987665", type: "credit", amount: 76000000.00 },
+        // 15-Dec-2025 debits
+        { date: "15-Dec-2025", description: "Loan 079200137131001", type: "debit", amount: 21424327.00 },
+        { date: "15-Dec-2025", description: "INT(079200137131001)", type: "debit", amount: 37365714.00 },
+        { date: "15-Dec-2025", description: "Loan 079200137131002", type: "debit", amount: 6209408.00 },
+        { date: "15-Dec-2025", description: "INT(079200137131002)", type: "debit", amount: 10829698.00 },   // note user wrote "10,829,698,00" fix comma
+        // 18-Dec-2025 credit
+        { date: "18-Dec-2025", description: "100FT13128700896", type: "credit", amount: 77000000.00 },
+        // 15-Jan-2026 debits
+        { date: "15-Jan-2026", description: "Loan 079200137131001", type: "debit", amount: 21567156.00 },
+        { date: "15-Jan-2026", description: "INT(079200137131001)", type: "debit", amount: 37222885.00 },
+        { date: "15-Jan-2026", description: "Loan 079200137131002", type: "debit", amount: 6250804.00 },
+        { date: "15-Jan-2026", description: "INT(079200137131002)", type: "debit", amount: 10788302.00 },
+        // 16-Jan-2026 credit
+        { date: "16-Jan-2026", description: "100FT13125467880", type: "credit", amount: 76000000.00 },
+        // 16-Feb-2026 debits
+        { date: "16-Feb-2026", description: "Loan 079200137131001", type: "debit", amount: 21710937.00 },
+        { date: "16-Feb-2026", description: "INT(079200137131001)", type: "debit", amount: 37079104.00 },
+        { date: "16-Feb-2026", description: "Loan 079200137131002", type: "debit", amount: 6292476.00 },
+        { date: "16-Feb-2026", description: "INT(079200137131002)", type: "debit", amount: 10746630.00 },
+        // 17-Feb-2026 credit
+        { date: "17-Feb-2026", description: "100FT13127690786", type: "credit", amount: 76000000.00 },
+        // 16-Mar-2026 debits
+        { date: "16-Mar-2026", description: "Loan 079200137131001", type: "debit", amount: 21855677.00 },
+        { date: "16-Mar-2026", description: "INT(079200137131001)", type: "debit", amount: 36934364.00 },
+        { date: "16-Mar-2026", description: "Loan 079200137131002", type: "debit", amount: 6334426.00 },
+        { date: "16-Mar-2026", description: "INT(079200137131002)", type: "debit", amount: 10704680.00 },
+        // 16-Mar-2026 credit (same day after debits)
+        { date: "16-Mar-2026", description: "100FT13123089760", type: "credit", amount: 76000000.00 },
+        // 15-Apr-2026 debits
+        { date: "15-Apr-2026", description: "Loan 079200137131001", type: "debit", amount: 22001381.00 },
+        { date: "15-Apr-2026", description: "INT(079200137131001)", type: "debit", amount: 36788660.00 },
+        { date: "15-Apr-2026", description: "Loan 079200137131002", type: "debit", amount: 6376656.00 },
+        { date: "15-Apr-2026", description: "INT(079200137131002)", type: "debit", amount: 10662450.00 },
+        // 16-Apr-2026 credit
+        { date: "16-Apr-2026", description: "100FT13127600897", type: "credit", amount: 77000000.00 },
+        // 15-May-2026 debits
+        { date: "15-May-2026", description: "Loan 079200137131001", type: "debit", amount: 22148057.00 },
+        { date: "15-May-2026", description: "INT(079200137131001)", type: "debit", amount: 36641984.00 },
+        { date: "15-May-2026", description: "Loan 079200137131002", type: "debit", amount: 6419167.00 },
+        { date: "15-May-2026", description: "INT(079200137131002)", type: "debit", amount: 10619939.00 },
+        // 17-May-2026 credit (final credit)
+        { date: "17-May-2026", description: "100FT13124099895", type: "credit", amount: 76000000.00 }
+    ];
+
+    // Opening balance (01-Jun-2025)
+    const OPENING_DATE = "01-Jun-2025";
+    const OPENING_BAL = 1110000.00;   // 1,110,000.00
+
+    let currentBalance = OPENING_BAL;
+    let totalDebits = 0;
+    let totalCredits = 0;
+
+    const rows = [];
+
+    // 1) opening row
+    rows.push({
+        date: OPENING_DATE,
+        description: "OPENING BALANCE",
+        debit: null,
+        credit: null,
+        balance: currentBalance,
+        available: currentBalance,
+        isOpening: true
+    });
+
+    // 2) process all transactions in exact order
+    for (let tx of rawTransactions) {
+        let debitVal = null;
+        let creditVal = null;
+        const amount = tx.amount;
+
+        if (tx.type === "debit") {
+            debitVal = amount;
+            currentBalance += amount;
+            totalDebits += amount;
+        } else { // credit
+            creditVal = amount;
+            currentBalance -= amount;
+            totalCredits += amount;
+        }
+
+        rows.push({
+            date: tx.date,
+            description: tx.description,
+            debit: debitVal,
+            credit: creditVal,
+            balance: currentBalance,
+            available: currentBalance,   // same as balance
+            isOpening: false
+        });
+    }
+
+    // 3) closing row as of 03-Jun-2026 (end of statement)
+    const finalBalance = currentBalance;
+    rows.push({
+        date: "03-Jun-2026",
+        description: "END OF STATEMENT PERIOD",
+        debit: null,
+        credit: null,
+        balance: finalBalance,
+        available: finalBalance,
+        isClosing: true
+    });
+
+    // summary calculations
+    const netChange = totalCredits - totalDebits;  // negative if more debt added
+
+    // Render summary stats
+    function renderSummary() {
+        const panel = document.getElementById('summaryPanel');
+        panel.innerHTML = `
+            <div class="summary-card">
+                <div class="summary-label">🔻 TOTAL DEBITS (Loan draws + Interest)</div>
+                <div class="summary-number negative">${formatNumber(totalDebits)}</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-label">🔺 TOTAL CREDITS (Repayments)</div>
+                <div class="summary-number positive">${formatNumber(totalCredits)}</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-label">📉 NET CHANGE (Credits - Debits)</div>
+                <div class="summary-number ${netChange >= 0 ? 'positive' : 'negative'}">${formatNumber(netChange)}</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-label">🏁 FINAL BALANCE (03-Jun-2026)</div>
+                <div class="summary-number negative">${formatNumber(finalBalance)}</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-label">🟢 FINAL AVAILABLE</div>
+                <div class="summary-number positive">${formatNumber(finalBalance)}</div>
+            </div>
+        `;
+    }
+
+    // Render table
+    function renderTable() {
+        const tbody = document.getElementById('tableBody');
+        tbody.innerHTML = '';
+
+        rows.forEach((row, idx) => {
+            const tr = document.createElement('tr');
+            if (row.isOpening) tr.classList.add('opening-row');
+            if (row.isClosing) tr.classList.add('closing-row');
+
+            // Date
+            const tdDate = document.createElement('td');
+            tdDate.textContent = row.date;
+            tr.appendChild(tdDate);
+
+            // Description
+            const tdDesc = document.createElement('td');
+            tdDesc.textContent = row.description;
+            tdDesc.classList.add('desc-column');
+            tr.appendChild(tdDesc);
+
+            // Debit
+            const tdDebit = document.createElement('td');
+            tdDebit.textContent = (row.debit !== null && row.debit !== undefined) ? formatNumber(row.debit) : "—";
+            tr.appendChild(tdDebit);
+
+            // Credit
+            const tdCredit = document.createElement('td');
+            tdCredit.textContent = (row.credit !== null && row.credit !== undefined) ? formatNumber(row.credit) : "—";
+            tr.appendChild(tdCredit);
+
+            // Balance
+            const tdBalance = document.createElement('td');
+            tdBalance.textContent = formatNumber(row.balance);
+            tdBalance.classList.add('balance-cell');
+            tr.appendChild(tdBalance);
+
+            // Available (same as balance)
+            const tdAvailable = document.createElement('td');
+            tdAvailable.textContent = formatNumber(row.available);
+            tdAvailable.classList.add('balance-cell');
+            tr.appendChild(tdAvailable);
+
+            tbody.appendChild(tr);
+        });
+
+        // Append totals row (quick overview)
+        const totalRow = document.createElement('tr');
+        totalRow.classList.add('total-row');
+        const tdEmpty = document.createElement('td');
+        tdEmpty.textContent = '';
+        const tdTotalLabel = document.createElement('td');
+        tdTotalLabel.textContent = 'TOTALS';
+        tdTotalLabel.style.fontWeight = 'bold';
+        const tdTotalDebit = document.createElement('td');
+        tdTotalDebit.textContent = formatNumber(totalDebits);
+        tdTotalDebit.style.fontWeight = 'bold';
+        const tdTotalCredit = document.createElement('td');
+        tdTotalCredit.textContent = formatNumber(totalCredits);
+        tdTotalCredit.style.fontWeight = 'bold';
+        const tdFinalBal = document.createElement('td');
+        tdFinalBal.textContent = formatNumber(finalBalance);
+        tdFinalBal.style.fontWeight = 'bold';
+        const tdFinalAvail = document.createElement('td');
+        tdFinalAvail.textContent = formatNumber(finalBalance);
+        tdFinalAvail.style.fontWeight = 'bold';
+
+        totalRow.appendChild(tdEmpty);
+        totalRow.appendChild(tdTotalLabel);
+        totalRow.appendChild(tdTotalDebit);
+        totalRow.appendChild(tdTotalCredit);
+        totalRow.appendChild(tdFinalBal);
+        totalRow.appendChild(tdFinalAvail);
+        tbody.appendChild(totalRow);
+    }
+
+    renderSummary();
+    renderTable();
+</script>
+</body>
+</html>
