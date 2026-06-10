@@ -173,40 +173,36 @@
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 5px;
-    margin-left: 80px;
+    margin-left: 100px;
+    gap: 1px;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
-    cursor: pointer;
 }
 .scroll-down {
     width: 20px;
     height: 20px;
 }
 .nav-menu:hover {
-    transition: 0.5s ease-in-out;
+    background-color: hsl(196, 86%, 47%);     
+    transform: translateY(2px);
 }
-
+a {
+    text-decoration: none;
+}
 .footer {
-    position: relative;
     display: flex;
-    padding: 10px;
-    line-height: 1.2;
-    background: #e6e2d8;
-}
-.font-text {
     text-align: center;
     justify-content: center;
     align-items: center;
+    gap: 5px;
+    background: #e6e2d8;
     color: #203554;
+    height: auto;
+    padding: 20px 10px 20px 10px;
     font-size: 12px;
     font-family: "Kantumruy Pro", sans-serif;
 }
-.font-fix {
-    justify-content: center;
-    align-items: center;
-    width: 5px;
-    height: 5px;
-   
-}
+
+
