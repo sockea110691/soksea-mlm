@@ -187,7 +187,7 @@
 .nav-menu:hover {
     background-color: hsl(196, 86%, 47%);     
     transform: translateY(2px);
-     border-radius: 20px;
+    border-radius: 20px;
 }
 a {
     text-decoration: none;
